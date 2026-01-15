@@ -13,3 +13,11 @@ Owner
 Updated date
 Created date
 Mark a to-do-list item as completed
+
+## Team Members
+- Nattaphong Jullayakiat 6688155
+- Veerakron No-in 6688164
+- Wirunya Kaewthong 6688172
+- Piyada Chalermnontakarn 6688239
+- Naruebordint Veangnont 6688139
+- Rattee Watperatam 6688141
