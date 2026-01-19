@@ -6,7 +6,7 @@ def main():
         print("3. Exit")
         choice = input("Choose an option: ").strip()
         if choice == "1":
-            print("Login functionality not implemented yet.Please check back soon1.")
+            print("Login functionality not implemented yet.Please check back soon.")
         elif choice == "2":
             print("Sign Up functionality not implemented yet. Please check back soon.")
         elif choice == "3":
