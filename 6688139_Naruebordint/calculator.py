@@ -12,35 +12,46 @@ def divide(x, y):
         return "Error: Division by zero"
     return x / y
 
+def calculate_velocity(distance: float, time: float) -> float:
+    if time <= 0:
+        raise ValueError("Time must be greater than zero")
+    return distance / time
+
 def main():
     print("Basic Calculator")
-    print("Operations: +, -, *, /")
+    print("Operations: +, -, *, /, v (velocity)")
 
     while True:
-        try:
-            num1 = float(input("Enter first number: "))
-            operation = input("Enter operation (+, -, *, /): ")
-            num2 = float(input("Enter second number: "))
+        operation = input("Enter operation (+, -, *, /, v): ")
+        if operation in ['+', '-', '*', '/']:
+            try:
+                num1 = float(input("Enter first number: "))
+                num2 = float(input("Enter second number: "))
+                if operation == '+':
+                    result = add(num1, num2)
+                elif operation == '-':
+                    result = subtract(num1, num2)
+                elif operation == '*':
+                    result = multiply(num1, num2)
+                elif operation == '/':
+                    result = divide(num1, num2)
+                print(f"Result: {result}")
+            except ValueError:
+                print("Invalid input. Please enter numbers.")
+        elif operation == 'v':
+            try:
+                distance = float(input("Enter distance: "))
+                time = float(input("Enter time: "))
+                result = calculate_velocity(distance, time)
+                print(f"Velocity: {result}")
+            except ValueError as e:
+                print(e)
+        else:
+            print("Invalid operation")
 
-            if operation == '+':
-                result = add(num1, num2)
-            elif operation == '-':
-                result = subtract(num1, num2)
-            elif operation == '*':
-                result = multiply(num1, num2)
-            elif operation == '/':
-                result = divide(num1, num2)
-            else:
-                print("Invalid operation")
-                continue
-
-            print(f"Result: {result}")
-
-            again = input("Do another calculation? (y/n): ").lower()
-            if again != 'y':
-                break
-        except ValueError:
-            print("Invalid input. Please enter numbers.")
+        again = input("Do another calculation? (y/n): ").lower()
+        if again != 'y':
+            break
 
 if __name__ == "__main__":
     main()
