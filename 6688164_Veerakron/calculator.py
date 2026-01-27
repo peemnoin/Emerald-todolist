@@ -4,6 +4,12 @@ Simple Python Calculator Program
 This module provides basic arithmetic operations: add, subtract, multiply, and divide.
 """
 
+def calculate_velocity(distance: float, time: float) -> float:
+    if time <= 0:
+        raise ValueError("Time must be greater than zero")
+    return distance / time
+
+
 
 def add(a, b):
     """Add two numbers.
