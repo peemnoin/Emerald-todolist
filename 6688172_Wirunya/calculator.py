@@ -1,6 +1,6 @@
 def add(a, b):
     return a + b
-# Updated calculator implementation
+
 def subtract(a, b):
     return a - b
 
